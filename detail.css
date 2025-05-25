@@ -10,7 +10,7 @@
 }
 
 .back-button a {
-  color: #333;
+  color: var(--text-color);
   text-decoration: none;
   display: inline-flex;
   align-items: center;
@@ -20,16 +20,16 @@
 }
 
 .back-button a:hover {
-  color: #e63946;
+  color: var(--primary-color);
 }
 
 .motorcycle-detail {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
-  background: #fff;
+  background: var(--card-bg);
   border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--card-shadow);
   padding: 2rem;
 }
 
@@ -56,6 +56,8 @@
 .thumbnail-container {
   display: flex;
   gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
 }
 
 .thumbnail {
@@ -65,6 +67,7 @@
   cursor: pointer;
   opacity: 0.6;
   transition: all 0.3s ease;
+  flex-shrink: 0;
 }
 
 .thumbnail.active,
@@ -81,12 +84,12 @@
 .detail-content h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: #333;
+  color: var(--text-color);
 }
 
 .price-tag {
   font-size: 1.5rem;
-  color: #e63946;
+  color: var(--primary-color);
   font-weight: bold;
   margin-bottom: 2rem;
 }
@@ -97,7 +100,7 @@
   gap: 1rem;
   margin-bottom: 2rem;
   padding: 1rem;
-  background: #f8f9fa;
+  background: var(--input-bg);
   border-radius: 10px;
 }
 
@@ -111,7 +114,7 @@
 
 .spec-item i {
   font-size: 1.5rem;
-  color: #e63946;
+  color: var(--primary-color);
 }
 
 .description {
@@ -121,12 +124,12 @@
 .description h2 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  color: #333;
+  color: var(--text-color);
 }
 
 .description p {
   line-height: 1.8;
-  color: #666;
+  color: var(--text-color);
 }
 
 /* Specifications Styles */
@@ -137,7 +140,7 @@
 .specifications h2 {
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
-  color: #333;
+  color: var(--text-color);
 }
 
 .specs-grid {
@@ -149,7 +152,7 @@
 .spec-group h3 {
   font-size: 1.2rem;
   margin-bottom: 1rem;
-  color: #333;
+  color: var(--text-color);
 }
 
 .spec-group ul {
@@ -158,8 +161,8 @@
 
 .spec-group ul li {
   padding: 0.5rem 0;
-  border-bottom: 1px solid #eee;
-  color: #666;
+  border-bottom: 1px solid var(--input-border);
+  color: var(--text-color);
 }
 
 .spec-group ul li:last-child {
@@ -186,22 +189,22 @@
 }
 
 .test-ride-btn {
-  background-color: #e63946;
+  background-color: var(--primary-color);
   color: #fff;
 }
 
 .test-ride-btn:hover {
-  background-color: #c1121f;
+  background-color: var(--button-hover);
 }
 
 .contact-btn {
-  background-color: #f8f9fa;
-  color: #333;
-  border: 2px solid #e63946;
+  background-color: var(--input-bg);
+  color: var(--text-color);
+  border: 2px solid var(--primary-color);
 }
 
 .contact-btn:hover {
-  background-color: #e63946;
+  background-color: var(--primary-color);
   color: #fff;
 }
 
@@ -209,14 +212,23 @@
 @media (max-width: 992px) {
   .motorcycle-detail {
     grid-template-columns: 1fr;
+    gap: 2rem;
   }
 
   .main-image {
     height: 300px;
   }
+
+  .detail-content h1 {
+    font-size: 2rem;
+  }
 }
 
 @media (max-width: 768px) {
+  .detail-container {
+    padding: 100px 1rem 2rem;
+  }
+
   .quick-specs {
     grid-template-columns: 1fr;
   }
@@ -227,5 +239,66 @@
 
   .cta-buttons {
     grid-template-columns: 1fr;
+  }
+
+  .detail-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .price-tag {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .detail-container {
+    padding: 80px 1rem 2rem;
+  }
+
+  .motorcycle-detail {
+    padding: 1rem;
+  }
+
+  .main-image {
+    height: 250px;
+  }
+
+  .thumbnail {
+    width: 60px;
+    height: 60px;
+  }
+
+  .detail-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .price-tag {
+    font-size: 1.2rem;
+  }
+
+  .specifications h2,
+  .description h2 {
+    font-size: 1.3rem;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .back-button,
+  .cta-buttons {
+    display: none;
+  }
+
+  .motorcycle-detail {
+    box-shadow: none;
+    padding: 0;
+  }
+
+  .detail-content h1 {
+    color: black;
+  }
+
+  .spec-group ul li {
+    color: black;
   }
 }
