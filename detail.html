@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Motorcycle Details - MotoShowcase</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="detail.css" />
+    <link rel="stylesheet" href="theme.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">HaqzMotoVault</div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#catalog">Catalog</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="detail-container">
+      <div class="back-button">
+        <a href="index.html#catalog"
+          ><i class="fas fa-arrow-left"></i> Back to Catalog</a
+        >
+      </div>
+
+      <div class="motorcycle-detail">
+        <div class="detail-gallery">
+          <div class="main-image">
+            <img id="mainImage" src="" alt="Motorcycle Image" />
+          </div>
+          <div class="thumbnail-container">
+            <img class="thumbnail active" src="" alt="Thumbnail 1" />
+            <img class="thumbnail" src="" alt="Thumbnail 2" />
+            <img class="thumbnail" src="" alt="Thumbnail 3" />
+          </div>
+        </div>
+
+        <div class="detail-content">
+          <h1 id="motorcycleName"></h1>
+          <div class="price-tag">
+            <span id="motorcyclePrice"></span>
+          </div>
+
+          <div class="quick-specs">
+            <div class="spec-item">
+              <i class="fas fa-tachometer-alt"></i>
+              <span id="engineSpec"></span>
+            </div>
+            <div class="spec-item">
+              <i class="fas fa-bolt"></i>
+              <span id="powerSpec"></span>
+            </div>
+            <div class="spec-item">
+              <i class="fas fa-weight"></i>
+              <span id="weightSpec"></span>
+            </div>
+          </div>
+
+          <div class="description">
+            <h2>Description</h2>
+            <p id="motorcycleDescription"></p>
+          </div>
+
+          <div class="specifications">
+            <h2>Technical Specifications</h2>
+            <div class="specs-grid">
+              <div class="spec-group">
+                <h3>Engine</h3>
+                <ul id="engineSpecs"></ul>
+              </div>
+              <div class="spec-group">
+                <h3>Dimensions</h3>
+                <ul id="dimensionSpecs"></ul>
+              </div>
+              <div class="spec-group">
+                <h3>Capacity</h3>
+                <ul id="capacitySpecs"></ul>
+              </div>
+              <div class="spec-group">
+                <h3>Features</h3>
+                <ul id="featureSpecs"></ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="cta-buttons">
+            <button class="test-ride-btn">Schedule Test Ride</button>
+            <button class="contact-btn">Contact Dealer</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>MotoShowcase</h3>
+          <p>Trusted platform for large motorcycle information</p>
+        </div>
+        <div class="footer-section">
+          <h3>Contact</h3>
+          <p>Email: info@motoshowcase.com</p>
+          <p>Phone: (021) 1234-5678</p>
+        </div>
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 MotoShowcase. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="detail.js"></script>
+    <script src="theme.js"></script>
+  </body>
+</html>

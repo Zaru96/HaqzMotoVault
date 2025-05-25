@@ -1,0 +1,462 @@
+:root {
+  /* Light mode variables */
+  --primary-color: #ff4d4d;
+  --secondary-color: #333;
+  --background-color: #fff;
+  --text-color: #333;
+  --card-bg: #fff;
+  --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --header-bg: #fff;
+  --footer-bg: #333;
+  --footer-text: #fff;
+  --input-bg: #f5f5f5;
+  --input-border: #ddd;
+  --button-hover: #ff3333;
+  --nav-link-color: #333;
+  --nav-link-hover: #ff4d4d;
+  --section-bg: #f9f9f9;
+  --hero-text: #fff;
+}
+
+[data-theme="dark"] {
+  /* Dark mode variables */
+  --primary-color: #ff6b6b;
+  --secondary-color: #fff;
+  --background-color: #1a1a1a;
+  --text-color: #fff;
+  --card-bg: #2d2d2d;
+  --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  --header-bg: #2d2d2d;
+  --footer-bg: #1a1a1a;
+  --footer-text: #fff;
+  --input-bg: #333;
+  --input-border: #444;
+  --button-hover: #ff5252;
+  --nav-link-color: #fff;
+  --nav-link-hover: #ff6b6b;
+  --section-bg: #2d2d2d;
+  --hero-text: #fff;
+  --spec-text: #fff;
+  --spec-border: #444;
+}
+
+/* Theme Switcher Button */
+.theme-switch {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  margin-left: 20px;
+  transition: all 0.3s ease;
+}
+
+.theme-switch:hover {
+  transform: scale(1.1);
+}
+
+.theme-switch i {
+  color: var(--nav-link-color);
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.theme-switch:hover i {
+  color: var(--nav-link-hover);
+}
+
+/* Apply theme variables to existing elements */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* Navigation styles */
+header {
+  background-color: var(--header-bg);
+  box-shadow: var(--card-shadow);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  color: var(--text-color);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: var(--nav-link-color);
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--nav-link-hover);
+}
+
+/* Section styles */
+.hero {
+  background-color: var(--background-color);
+}
+
+.hero-content h1,
+.hero-content p {
+  color: var(--hero-text);
+}
+
+.about {
+  background-color: var(--section-bg);
+}
+
+.about h2,
+.about p {
+  color: var(--text-color);
+}
+
+.catalog {
+  background-color: var(--section-bg);
+}
+
+.catalog h2 {
+  color: var(--text-color);
+}
+
+.contact {
+  background-color: var(--section-bg);
+}
+
+.contact h2 {
+  color: var(--text-color);
+}
+
+/* Card styles */
+.motorcycle-card {
+  background-color: var(--card-bg);
+  box-shadow: var(--card-shadow);
+}
+
+.motorcycle-card h3 {
+  color: var(--text-color);
+}
+
+.specs p {
+  color: var(--text-color);
+}
+
+.details-btn {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.details-btn:hover {
+  background-color: var(--button-hover);
+}
+
+/* Form styles */
+input,
+textarea {
+  background-color: var(--input-bg);
+  border: 1px solid var(--input-border);
+  color: var(--text-color);
+}
+
+.submit-btn {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.submit-btn:hover {
+  background-color: var(--button-hover);
+}
+
+/* Footer styles */
+footer {
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
+}
+
+.footer-section h3 {
+  color: var(--footer-text);
+}
+
+.social-links a {
+  color: var(--footer-text);
+}
+
+.social-links a:hover {
+  color: var(--primary-color);
+}
+
+/* Detail page specific styles */
+.detail-container {
+  background-color: var(--background-color);
+  padding: 2rem;
+}
+
+.back-button a {
+  color: var(--text-color);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.back-button a:hover {
+  color: var(--primary-color);
+}
+
+.motorcycle-detail {
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
+}
+
+.detail-gallery {
+  background-color: var(--card-bg);
+}
+
+.main-image {
+  background-color: var(--card-bg);
+}
+
+.main-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.thumbnail-container {
+  background-color: var(--card-bg);
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+}
+
+.thumbnail {
+  width: 100px;
+  height: 75px;
+  object-fit: cover;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.thumbnail:hover {
+  border-color: var(--primary-color);
+}
+
+.thumbnail.active {
+  border-color: var(--primary-color);
+}
+
+.detail-content {
+  background-color: var(--card-bg);
+  padding: 2rem;
+}
+
+.detail-content h1 {
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+
+.price-tag {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+.quick-specs {
+  background-color: var(--card-bg);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.spec-item {
+  background-color: var(--input-bg);
+  padding: 1rem;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.spec-item i {
+  color: var(--primary-color);
+}
+
+.spec-item span {
+  color: var(--text-color);
+}
+
+.description {
+  margin-bottom: 2rem;
+}
+
+.description h2 {
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+
+.description p {
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Technical Specifications styles */
+.specifications {
+  background-color: var(--card-bg);
+  margin-bottom: 2rem;
+}
+
+.specifications h2 {
+  color: var(--spec-text);
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.specs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.spec-group {
+  background-color: var(--input-bg);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--spec-border);
+}
+
+.spec-group h3 {
+  color: var(--spec-text);
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+.spec-group ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.spec-group li {
+  color: var(--spec-text);
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--spec-border);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.spec-group li:last-child {
+  border-bottom: none;
+}
+
+/* Add hover effect for spec items */
+.spec-group li:hover {
+  color: var(--primary-color);
+  transition: color 0.3s ease;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.test-ride-btn,
+.contact-btn {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.test-ride-btn {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.contact-btn {
+  background-color: var(--input-bg);
+  color: var(--text-color);
+  border: 1px solid var(--input-border);
+}
+
+.test-ride-btn:hover {
+  background-color: var(--button-hover);
+}
+
+.contact-btn:hover {
+  background-color: var(--card-bg);
+  border-color: var(--primary-color);
+}
+
+/* Responsive styles for detail page */
+@media (max-width: 768px) {
+  .detail-container {
+    padding: 1rem;
+  }
+
+  .detail-content {
+    padding: 1rem;
+  }
+
+  .specs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+  }
+
+  .test-ride-btn,
+  .contact-btn {
+    width: 100%;
+  }
+}
+
+/* Filter buttons */
+.filter-btn {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  border: 1px solid var(--input-border);
+}
+
+.filter-btn.active {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.filter-btn:hover:not(.active) {
+  background-color: var(--input-bg);
+}
+
+/* Smooth transition for theme switching */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
