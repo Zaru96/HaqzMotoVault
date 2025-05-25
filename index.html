@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MotoShowcase - Katalog Motor Besar</title>
+    <title>HaqzMotoVault | Find Your Dream Motorcycle</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -29,15 +29,54 @@
     </header>
 
     <section id="home" class="hero">
-      <div class="hero-content">
-        <h1>Welcome to HaqzMotoVault</h1>
-        <p>Find Your Dream Motorcycle</p>
-        <a href="#catalog" class="cta-button">View Catalog</a>
+      <div class="carousel">
+        <div class="carousel-slide active">
+          <div class="hero-content">
+            <h1>Welcome to HaqzMotoVault</h1>
+            <p>Find Your Dream Motorcycle</p>
+            <a href="#catalog" class="cta-button">View Catalog</a>
+          </div>
+        </div>
+        <div class="carousel-slide">
+          <div class="hero-content">
+            <h1>Sport Bikes Collection</h1>
+            <p>Explore the fastest and most stylish sport bikes.</p>
+            <a href="#catalog" class="cta-button">See Sport Bikes</a>
+          </div>
+        </div>
+        <div class="carousel-slide">
+          <div class="hero-content">
+            <h1>Touring & Adventure</h1>
+            <p>Find the best motorcycles for your next journey.</p>
+            <a href="#catalog" class="cta-button">See Touring Bikes</a>
+          </div>
+        </div>
+        <button class="carousel-arrow left" aria-label="Previous slide">
+          &#10094;
+        </button>
+        <button class="carousel-arrow right" aria-label="Next slide">
+          &#10095;
+        </button>
+        <div class="carousel-dots"></div>
       </div>
     </section>
 
     <section id="catalog" class="catalog">
       <h2>Motorcycle Catalog</h2>
+      <div class="search-container">
+        <div class="search-wrapper">
+          <i class="fas fa-search search-icon"></i>
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search motorcycles..."
+            class="search-input"
+          />
+          <button class="clear-search" id="clearSearch">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+      </div>
       <div class="filter-container">
         <button class="filter-btn active" data-filter="all">All</button>
         <button class="filter-btn" data-filter="sport">Sport</button>

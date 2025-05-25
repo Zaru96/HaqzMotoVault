@@ -1,5 +1,55 @@
 // Motorcycle data
 const motorcycles = {
+  "suzuki-gsxr1000": {
+    name: "Suzuki GSX-R1000",
+    price: "Rp 1.100.000.000",
+    mainImage:
+      "https://imgcdn.zigwheels.ph/large/gallery/exterior/83/1840/suzuki-gsx-r1000-slant-rear-view-full-image-518200.jpg",
+    thumbnails: [
+      "https://imgcdn.zigwheels.ph/large/gallery/exterior/83/1840/suzuki-gsx-r1000-front-view-full-image-721383.jpg",
+      "https://imgcdn.zigwheels.ph/large/gallery/exterior/83/1840/suzuki-gsx-r1000-right-side-viewfull-image-779074.jpg",
+      "https://imgcdn.zigwheels.ph/large/gallery/exterior/83/1840/suzuki-gsx-r1000-left-side-view-full-image-506626.jpg",
+    ],
+    quickSpecs: {
+      engine: "999 cc",
+      power: "202 HP",
+      weight: "203 kg",
+    },
+    description:
+      "The Suzuki GSX-R1000 is a legendary sport bike that combines MotoGP technology with exceptional performance. With its 999cc engine producing 202 HP, this motorcycle offers an unmatched riding experience and has been a dominant force in World Superbike racing.",
+    specifications: {
+      engine: [
+        "Type: 4 Cylinder, 4 Stroke, DOHC",
+        "Capacity: 999 cc",
+        "Maximum Power: 202 HP @ 13,200 rpm",
+        "Maximum Torque: 117.6 Nm @ 10,800 rpm",
+        "Transmission: 6-speed",
+      ],
+      dimensions: [
+        "Length: 2,075 mm",
+        "Width: 705 mm",
+        "Height: 1,145 mm",
+        "Wheelbase: 1,420 mm",
+        "Seat Height: 825 mm",
+      ],
+      capacity: [
+        "Fuel Tank: 16 L",
+        "Engine Oil: 3.8 L",
+        "Dry Weight: 203 kg",
+        "Wet Weight: 218 kg",
+      ],
+      features: [
+        "Suzuki Drive Mode Selector (S-DMS)",
+        "Suzuki Traction Control System",
+        "Suzuki Quick Shift System",
+        "Launch Control System",
+        "Motion Track Brake System",
+        "Suzuki Intelligent Ride System (S.I.R.S.)",
+        "Bi-directional Quick Shifter",
+        "Cornering ABS",
+      ],
+    },
+  },
   "honda-cbr1000rr-r": {
     name: "Honda CBR1000RR-R",
     price: "Rp 1.250.000.000",
@@ -286,6 +336,152 @@ const motorcycles = {
         "Traction Control",
         "Cornering ABS",
         "Cruise Control",
+      ],
+    },
+  },
+  "yamaha-r1m": {
+    name: "Yamaha R1M",
+    price: "Rp 1.150.000.000",
+    mainImage:
+      "https://yamahamotorsports.com/media/images_products/2025-25-yzf-r1m/1200px/11-2025-YZFR1MS-SMX-US-11-YY-36.JPG.webp",
+    thumbnails: [
+      "https://yamahamotorsports.com/media/images_products/2025-25-yzf-r1m/1200px/11-2025-YZFR1MS-SMX-US-11-YY-32.JPG.webp",
+      "https://yamahamotorsports.com/media/images_products/2025-25-yzf-r1m/1200px/11-2025-YZFR1MS-SMX-US-11-YY-5.JPG.webp",
+      "https://yamahamotorsports.com/media/images_products/2025-25-yzf-r1m/1200px/11-2025-YZFR1MS-SMX-US-11-YY-23.JPG.webp",
+    ],
+    quickSpecs: {
+      engine: "998 cc",
+      power: "200 HP",
+      weight: "202 kg",
+    },
+    description:
+      "The Yamaha R1M is Yamaha's flagship superbike, adopting MotoGP technology with a 998cc crossplane engine and advanced electronics for maximum performance on both track and road.",
+    specifications: {
+      engine: [
+        "Type: 4 Cylinder, 4 Stroke, DOHC",
+        "Capacity: 998 cc",
+        "Maximum Power: 200 HP @ 13,500 rpm",
+        "Maximum Torque: 113.3 Nm @ 11,500 rpm",
+        "Transmission: 6-speed",
+      ],
+      dimensions: [
+        "Length: 2,055 mm",
+        "Width: 690 mm",
+        "Height: 1,165 mm",
+        "Wheelbase: 1,405 mm",
+        "Seat Height: 860 mm",
+      ],
+      capacity: [
+        "Fuel Tank: 17 L",
+        "Engine Oil: 4.9 L",
+        "Dry Weight: 202 kg",
+        "Wet Weight: 202 kg",
+      ],
+      features: [
+        "Öhlins Electronic Racing Suspension",
+        "Quick Shifter",
+        "Launch Control",
+        "Slide Control",
+        "Traction Control",
+        "Cornering ABS",
+        "Full TFT Display",
+      ],
+    },
+  },
+  "bmw-s1000rr": {
+    name: "BMW S1000RR",
+    price: "Rp 1.250.000.000",
+    mainImage:
+      "https://sepeda-motor.info/wp-content/uploads/2019/11/BMW-S1000RR.jpg",
+    thumbnails: [
+      "https://d1uzk9o9cg136f.cloudfront.net/f/16782548/rc/2020/11/05/1f61567a6371a8ba23d80bffc57d1f9a0406a4f3_xlarge.jpg",
+      "https://julaksendiedesign.wordpress.com/wp-content/uploads/2018/12/2019-BMW-S1000RR-51.jpg?w=998",
+      "https://imgd.aeplcdn.com/1056x594/n/bw/models/colors/undefined-light-white--lupin-blue-metallic--racing-red-1574425610996.jpg?q=80",
+    ],
+    quickSpecs: {
+      engine: "999 cc",
+      power: "207 HP",
+      weight: "197 kg",
+    },
+    description:
+      "The BMW S1000RR is a German superbike with a 999cc ShiftCam engine, producing 207 HP and equipped with a full suite of electronics for maximum performance and safety.",
+    specifications: {
+      engine: [
+        "Type: 4 Cylinder, 4 Stroke, DOHC",
+        "Capacity: 999 cc",
+        "Maximum Power: 207 HP @ 13,500 rpm",
+        "Maximum Torque: 113 Nm @ 11,000 rpm",
+        "Transmission: 6-speed",
+      ],
+      dimensions: [
+        "Length: 2,073 mm",
+        "Width: 848 mm",
+        "Height: 1,151 mm",
+        "Wheelbase: 1,441 mm",
+        "Seat Height: 824 mm",
+      ],
+      capacity: [
+        "Fuel Tank: 16.5 L",
+        "Engine Oil: 4.5 L",
+        "Dry Weight: 197 kg",
+        "Wet Weight: 197 kg",
+      ],
+      features: [
+        "BMW ShiftCam Technology",
+        "Dynamic Traction Control",
+        "Wheelie Control",
+        "Launch Control",
+        "ABS Pro",
+        "Quick Shifter",
+        "Full TFT Display",
+      ],
+    },
+  },
+  "kawasaki-zx10rr": {
+    name: "Kawasaki ZX-10RR",
+    price: "Rp 1.120.000.000",
+    mainImage:
+      "https://content2.kawasaki.com/ContentStorage/KMI/Products/5044/c0baebfd-d942-4d1a-8116-ff393d6dd985.png?w=767",
+    thumbnails: [
+      "https://content2.kawasaki.com/ContentStorage/KMI/Products/5005/12c1726b-53ed-4b34-a4ec-e4c63c6dbce3.jpg?w=510&h=340&mode=crop",
+      "https://content2.kawasaki.com/ContentStorage/KMI/Products/5092/c3840e85-3455-4b83-bc4c-f90dafc752f8.jpg?w=510&h=340&mode=crop",
+      "https://content2.kawasaki.com/ContentStorage/KMI/Products/5092/1e3e1f75-8f25-4da9-8fbe-df97b73bbcfa.jpg?w=510&h=340&mode=crop",
+    ],
+    quickSpecs: {
+      engine: "998 cc",
+      power: "204 HP",
+      weight: "207 kg",
+    },
+    description:
+      "The Kawasaki ZX-10RR is Kawasaki's flagship sport bike with a 998cc engine, WorldSBK racing technology, and advanced electronics for maximum circuit performance.",
+    specifications: {
+      engine: [
+        "Type: 4 Cylinder, 4 Stroke, DOHC",
+        "Capacity: 998 cc",
+        "Maximum Power: 204 HP @ 14,000 rpm",
+        "Maximum Torque: 111.8 Nm @ 11,500 rpm",
+        "Transmission: 6-speed",
+      ],
+      dimensions: [
+        "Length: 2,085 mm",
+        "Width: 750 mm",
+        "Height: 1,185 mm",
+        "Wheelbase: 1,450 mm",
+        "Seat Height: 835 mm",
+      ],
+      capacity: [
+        "Fuel Tank: 17 L",
+        "Engine Oil: 4.2 L",
+        "Dry Weight: 207 kg",
+        "Wet Weight: 207 kg",
+      ],
+      features: [
+        "Kawasaki Launch Control Mode",
+        "Cornering Management Function",
+        "Quick Shifter",
+        "Traction Control",
+        "Cornering ABS",
+        "Full TFT Display",
       ],
     },
   },

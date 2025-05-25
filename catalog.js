@@ -78,6 +78,58 @@ const motorcycles = {
       fuel: "20 L",
     },
   },
+  "yamaha-r1m": {
+    name: "Yamaha R1M",
+    category: "sport",
+    price: "Rp 1.150.000.000",
+    image:
+      "https://i0.wp.com/jurnalbikers.com/wp-content/uploads/2022/02/img-4_copy_800x532_1.jpg?resize=800%2C532&ssl=1",
+    specs: {
+      engine: "998 cc",
+      power: "200 HP",
+      weight: "202 kg",
+      fuel: "17 L",
+    },
+  },
+  "bmw-s1000rr": {
+    name: "BMW S1000RR",
+    category: "sport",
+    price: "Rp 1.250.000.000",
+    image:
+      "https://imgcdn.oto.com/large/gallery/exterior/67/936/bmw-s-1000-rr-slant-front-view-full-image-913209.jpg",
+    specs: {
+      engine: "999 cc",
+      power: "207 HP",
+      weight: "197 kg",
+      fuel: "16.5 L",
+    },
+  },
+  "kawasaki-zx10rr": {
+    name: "Kawasaki ZX-10RR",
+    category: "sport",
+    price: "Rp 1.120.000.000",
+    image:
+      "https://www.olx.co.id/news/wp-content/uploads/2024/05/harga-ZX10R-1-696x464.webp",
+    specs: {
+      engine: "998 cc",
+      power: "204 HP",
+      weight: "207 kg",
+      fuel: "17 L",
+    },
+  },
+  "suzuki-gsxr1000": {
+    name: "Suzuki GSX-R1000",
+    category: "sport",
+    price: "Rp 1.100.000.000",
+    image:
+      "https://imgcdn.zigwheels.ph/large/gallery/exterior/83/1840/suzuki-gsx-r1000-slant-rear-view-full-image-518200.jpg",
+    specs: {
+      engine: "999 cc",
+      power: "202 HP",
+      weight: "203 kg",
+      fuel: "16 L",
+    },
+  },
 };
 
 // Function to create motorcycle card
@@ -102,12 +154,18 @@ function createMotorcycleCard(id, motorcycle) {
 }
 
 // Function to filter motorcycles
-function filterMotorcycles(category) {
+function filterMotorcycles(category, searchTerm = "") {
   const motorcycleGrid = document.querySelector(".motorcycle-grid");
   motorcycleGrid.innerHTML = "";
 
   Object.entries(motorcycles).forEach(([id, motorcycle]) => {
-    if (category === "all" || motorcycle.category === category) {
+    const matchesCategory =
+      category === "all" || motorcycle.category === category;
+    const matchesSearch =
+      searchTerm === "" ||
+      motorcycle.name.toLowerCase().includes(searchTerm.toLowerCase());
+
+    if (matchesCategory && matchesSearch) {
       motorcycleGrid.innerHTML += createMotorcycleCard(id, motorcycle);
     }
   });
@@ -124,8 +182,36 @@ document.addEventListener("DOMContentLoaded", () => {
       // Add active class to clicked button
       button.classList.add("active");
       // Filter motorcycles
-      filterMotorcycles(button.dataset.filter);
+      const searchTerm = document.getElementById("searchInput").value;
+      filterMotorcycles(button.dataset.filter, searchTerm);
     });
+  });
+
+  // Add search input handler
+  const searchInput = document.getElementById("searchInput");
+  const clearSearchBtn = document.getElementById("clearSearch");
+
+  searchInput.addEventListener("input", () => {
+    const activeFilter =
+      document.querySelector(".filter-btn.active").dataset.filter;
+    filterMotorcycles(activeFilter, searchInput.value);
+
+    // Show/hide clear button
+    if (searchInput.value.length > 0) {
+      clearSearchBtn.classList.add("visible");
+    } else {
+      clearSearchBtn.classList.remove("visible");
+    }
+  });
+
+  // Add clear search functionality
+  clearSearchBtn.addEventListener("click", () => {
+    searchInput.value = "";
+    clearSearchBtn.classList.remove("visible");
+    const activeFilter =
+      document.querySelector(".filter-btn.active").dataset.filter;
+    filterMotorcycles(activeFilter, "");
+    searchInput.focus();
   });
 
   // Initial load with all motorcycles

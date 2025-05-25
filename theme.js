@@ -120,6 +120,69 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     { passive: true }
   );
+
+  // Carousel Minimalis Home
+  if (document.querySelector(".carousel")) {
+    const slides = document.querySelectorAll(".carousel-slide");
+    const prevBtn = document.querySelector(".carousel-arrow.left");
+    const nextBtn = document.querySelector(".carousel-arrow.right");
+    const dotsContainer = document.querySelector(".carousel-dots");
+    let current = 0;
+    let autoSlideInterval;
+
+    // Buat dot
+    slides.forEach((_, i) => {
+      const dot = document.createElement("button");
+      dot.setAttribute("aria-label", "Go to slide " + (i + 1));
+      dot.addEventListener("click", () => goToSlide(i, true));
+      dotsContainer.appendChild(dot);
+    });
+    const dots = dotsContainer.querySelectorAll("button");
+
+    function updateSlides() {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle("active", i === current);
+      });
+      dots.forEach((dot, i) => {
+        dot.classList.toggle("active", i === current);
+      });
+    }
+
+    function goToSlide(idx, resetAuto) {
+      current = (idx + slides.length) % slides.length;
+      updateSlides();
+      if (resetAuto) restartAutoSlide();
+    }
+
+    function nextSlide(resetAuto) {
+      goToSlide(current + 1, resetAuto);
+    }
+    function prevSlide(resetAuto) {
+      goToSlide(current - 1, resetAuto);
+    }
+
+    nextBtn.addEventListener("click", () => nextSlide(true));
+    prevBtn.addEventListener("click", () => prevSlide(true));
+
+    function autoSlide() {
+      nextSlide();
+    }
+    function restartAutoSlide() {
+      clearInterval(autoSlideInterval);
+      autoSlideInterval = setInterval(autoSlide, 5000);
+    }
+
+    updateSlides();
+    restartAutoSlide();
+
+    // Pause auto-slide on hover (desktop)
+    document
+      .querySelector(".carousel")
+      .addEventListener("mouseenter", () => clearInterval(autoSlideInterval));
+    document
+      .querySelector(".carousel")
+      .addEventListener("mouseleave", restartAutoSlide);
+  }
 });
 
 // Update theme icon based on current theme
