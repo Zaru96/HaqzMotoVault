@@ -1,13 +1,11 @@
 // News API configuration
-const NEWS_API_KEY = "e689e1ea6a5c4960b5fc689232449b30"; // Replace with your NewsAPI key
-const NEWS_API_URL = "https://newsapi.org/v2/everything";
+const BACKEND_URL =
+  "https://[YOUR_RAILWAY_PROJECT_NAME].up.railway.app/api/news";
 
 // Function to fetch motorsport news
 async function fetchMotorsportNews() {
   try {
-    const response = await fetch(
-      `${NEWS_API_URL}?q=(motogp OR wsbk OR "Formula 1" OR F1) AND motorsport&language=en&sortBy=publishedAt&apiKey=${NEWS_API_KEY}`
-    );
+    const response = await fetch(BACKEND_URL);
     const data = await response.json();
 
     if (data.status === "ok") {
