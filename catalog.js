@@ -13,6 +13,45 @@ const motorcycles = {
       fuel: "16.1 L",
     },
   },
+  "kawasaki-z1000": {
+    name: "Kawasaki Z1000",
+    category: "naked",
+    price: "Rp 850.000.000",
+    image:
+      "https://i.pinimg.com/736x/10/e4/36/10e436165a5c2d49d089e372ba653b9e.jpg",
+    specs: {
+      engine: "1043 cc",
+      power: "142 HP",
+      weight: "221 kg",
+      fuel: "17 L",
+    },
+  },
+  "bmw-s1000r": {
+    name: "BMW S1000R",
+    category: "naked",
+    price: "Rp 950.000.000",
+    image:
+      "https://www.financialexpress.com/wp-content/uploads/2024/11/BMW-S-1000-R.jpg",
+    specs: {
+      engine: "999 cc",
+      power: "165 HP",
+      weight: "199 kg",
+      fuel: "17.5 L",
+    },
+  },
+  "honda-cb1000r": {
+    name: "Honda CB1000R",
+    category: "naked",
+    price: "Rp 900.000.000",
+    image:
+      "https://imgcdn.zigwheels.ph/large/gallery/exterior/73/2028/honda-cb1000r-slant-rear-view-full-image-425802.jpg",
+    specs: {
+      engine: "998 cc",
+      power: "145 HP",
+      weight: "214 kg",
+      fuel: "16.2 L",
+    },
+  },
   "yamaha-mt10": {
     name: "Yamaha MT-10",
     category: "naked",

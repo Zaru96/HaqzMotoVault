@@ -78,7 +78,7 @@ const motorcycles = {
       dimensions: [
         "Length: 2,100 mm",
         "Width: 745 mm",
-        "Height: 1,145 mm",
+        +-"Height: 1,145 mm",
         "Wheelbase: 1,455 mm",
         "Seat Height: 830 mm",
       ],
@@ -250,7 +250,7 @@ const motorcycles = {
       "https://cdn.pertamax7.com/wp-content/uploads/2021/04/Spesifikasi-KTM-1290-SUPER-DUKE-RR.jpg",
     thumbnails: [
       "https://cdn.pertamax7.com/wp-content/uploads/2021/04/KTM-1290-SUPER-DUKE-RR-Tampak-Kiri-.jpg",
-      "https://img.webike-cdn.net/370x250/moto_img/cg/11/10499/L_db4d4394ba75a567c7facc40ed.jpg",
+      "https://fariolisrl.com/storage/media/4269/pho-bike-90-re-1290-sdr-22-wh-90re-sall-aepi-v1.png",
       "https://www.ktmmalaysia.com/wp-content/uploads/2024/05/PHO_BIKE_90_LI_MY24-KTM-1390-SUPER-DUKE-R-ORANGE-EU-90-Left_SALL_AEPI_V1.png",
     ],
     quickSpecs: {
@@ -482,6 +482,155 @@ const motorcycles = {
         "Traction Control",
         "Cornering ABS",
         "Full TFT Display",
+      ],
+    },
+  },
+  "kawasaki-z1000": {
+    name: "Kawasaki Z1000",
+    price: "Rp 850.000.000",
+    mainImage:
+      "https://content2.kawasaki.com/ContentStorage/KMI/Products/5127/d00fa08f-ee00-45ad-a31b-de92854360ae.jpg?w=510&h=340&mode=crop",
+    thumbnails: [
+      "https://i.pinimg.com/736x/ae/df/05/aedf0504916e9e5389f32121089bbcfe.jpg",
+      "https://content2.kawasaki.com/ContentStorage/KMI/Products/5127/b38ca7a1-b9be-4904-9ee0-27a60d5b2daa.jpg?w=510&h=340&mode=crop",
+      "https://content2.kawasaki.com/ContentStorage/KMI/Products/5127/0249f4d4-010e-4ac6-a672-e8f8e72b1e78.jpg?w=510&h=340&mode=crop",
+    ],
+    quickSpecs: {
+      engine: "1043 cc",
+      power: "142 HP",
+      weight: "221 kg",
+    },
+    description:
+      "The Kawasaki Z1000 is a powerful naked bike that combines aggressive styling with impressive performance. With its 1043cc engine producing 142 HP, this motorcycle offers an exciting riding experience with its distinctive Sugomi design language.",
+    specifications: {
+      engine: [
+        "Type: 4 Cylinder, 4 Stroke, DOHC",
+        "Capacity: 1043 cc",
+        "Maximum Power: 142 HP @ 10,000 rpm",
+        "Maximum Torque: 111 Nm @ 7,300 rpm",
+        "Transmission: 6-speed",
+      ],
+      dimensions: [
+        "Length: 2,045 mm",
+        "Width: 790 mm",
+        "Height: 1,055 mm",
+        "Wheelbase: 1,440 mm",
+        "Seat Height: 815 mm",
+      ],
+      capacity: [
+        "Fuel Tank: 17 L",
+        "Engine Oil: 3.2 L",
+        "Dry Weight: 221 kg",
+        "Wet Weight: 235 kg",
+      ],
+      features: [
+        "Kawasaki Traction Control (KTRC)",
+        "Power Mode Selection",
+        "ABS",
+        "Öhlins Suspension",
+        "Brembo Brakes",
+        "LED Lighting",
+        "Digital Instrumentation",
+      ],
+    },
+  },
+  "bmw-s1000r": {
+    name: "BMW S1000R",
+    price: "Rp 950.000.000",
+    mainImage:
+      "https://imgd.aeplcdn.com/642x361/n/cw/ec/191477/bmw-s-1000-r-right-side-view1.jpeg?isig=0&q=80",
+    thumbnails: [
+      "https://imgd.aeplcdn.com/642x361/n/cw/ec/191477/bmw-s-1000-r-right-side-view2.jpeg?isig=0&q=75",
+      "https://imgd.aeplcdn.com/642x361/n/cw/ec/191477/bmw-s-1000-r-right-side-view6.jpeg?isig=0&q=75",
+      "https://imgd.aeplcdn.com/642x361/n/cw/ec/191477/bmw-s-1000-r-left-side-view4.jpeg?isig=0&q=75",
+    ],
+    quickSpecs: {
+      engine: "999 cc",
+      power: "165 HP",
+      weight: "199 kg",
+    },
+    description:
+      "The BMW S1000R is a high-performance naked bike that combines sport bike technology with street-focused ergonomics. With its 999cc engine producing 165 HP, this motorcycle offers an exhilarating riding experience with advanced electronics and dynamic handling.",
+    specifications: {
+      engine: [
+        "Type: 4 Cylinder, 4 Stroke, DOHC",
+        "Capacity: 999 cc",
+        "Maximum Power: 165 HP @ 11,000 rpm",
+        "Maximum Torque: 114 Nm @ 9,250 rpm",
+        "Transmission: 6-speed",
+      ],
+      dimensions: [
+        "Length: 2,077 mm",
+        "Width: 845 mm",
+        "Height: 1,220 mm",
+        "Wheelbase: 1,439 mm",
+        "Seat Height: 820 mm",
+      ],
+      capacity: [
+        "Fuel Tank: 17.5 L",
+        "Engine Oil: 3.5 L",
+        "Dry Weight: 199 kg",
+        "Wet Weight: 214 kg",
+      ],
+      features: [
+        "Dynamic Traction Control (DTC)",
+        "Dynamic Brake Control (DBC)",
+        "ABS Pro",
+        "Dynamic ESA",
+        "Quick Shifter",
+        "Riding Modes Pro",
+        "LED Headlight",
+        "6.5-inch TFT Display",
+      ],
+    },
+  },
+  "honda-cb1000r": {
+    name: "Honda CB1000R",
+    price: "Rp 900.000.000",
+    mainImage:
+      "https://d29c80i09kxy2a.cloudfront.net/custom/motorcycle-model-photo/original/5d87585e52c81.webp",
+    thumbnails: [
+      "https://www.motorcyclespecs.co.za/Gallery_A-L_16/honda-cb1000r-21-08.jpg",
+      "https://d29c80i09kxy2a.cloudfront.net/custom/motorcycle-model-photo/original/5d87584bca855.webp",
+      "https://www.motorcyclespecs.co.za/Gallery_A-L_16/honda-cb1000r-21-02.jpg",
+    ],
+    quickSpecs: {
+      engine: "998 cc",
+      power: "145 HP",
+      weight: "214 kg",
+    },
+    description:
+      "The Honda CB1000R is a premium naked bike that combines retro styling with modern technology. With its 998cc engine producing 145 HP, this motorcycle offers a perfect balance of performance and style, featuring Honda's Neo Sports Café design language.",
+    specifications: {
+      engine: [
+        "Type: 4 Cylinder, 4 Stroke, DOHC",
+        "Capacity: 998 cc",
+        "Maximum Power: 145 HP @ 10,500 rpm",
+        "Maximum Torque: 104 Nm @ 8,250 rpm",
+        "Transmission: 6-speed",
+      ],
+      dimensions: [
+        "Length: 2,120 mm",
+        "Width: 789 mm",
+        "Height: 1,095 mm",
+        "Wheelbase: 1,455 mm",
+        "Seat Height: 830 mm",
+      ],
+      capacity: [
+        "Fuel Tank: 16.2 L",
+        "Engine Oil: 3.8 L",
+        "Dry Weight: 214 kg",
+        "Wet Weight: 228 kg",
+      ],
+      features: [
+        "Honda Selectable Torque Control (HSTC)",
+        "Power Modes",
+        "ABS",
+        "Showa SFF-BP Front Fork",
+        "Showa Rear Shock",
+        "LED Lighting",
+        "Full LCD Instrumentation",
+        "Quick Shifter",
       ],
     },
   },

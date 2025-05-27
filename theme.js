@@ -1,3 +1,26 @@
+// Scroll animation for catalog section
+document.addEventListener("DOMContentLoaded", () => {
+  const catalogSection = document.querySelector(".catalog");
+  const observerOptions = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.1,
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target); // Stop observing once visible
+      }
+    });
+  }, observerOptions);
+
+  if (catalogSection) {
+    observer.observe(catalogSection);
+  }
+});
+
 // Theme switcher functionality
 document.addEventListener("DOMContentLoaded", () => {
   // Create theme switch button
@@ -19,6 +42,12 @@ document.addEventListener("DOMContentLoaded", () => {
   // Add mobile menu button before nav links
   const nav = document.querySelector("nav");
   nav.insertBefore(mobileMenuBtn, navLinks);
+
+  // Set transition delay for mobile menu items
+  const navItems = navLinks.querySelectorAll("li");
+  navItems.forEach((item, index) => {
+    item.style.setProperty("--i", index);
+  });
 
   // Create and add overlay for mobile sidebar
   let overlay = document.querySelector(".mobile-nav-overlay");

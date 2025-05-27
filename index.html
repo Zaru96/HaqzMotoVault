@@ -18,10 +18,11 @@
   <body>
     <header>
       <nav>
-        <div class="logo">HaqzMotoVault</div>
+        <a href="#home" class="logo">HaqzMotoVault</a>
         <ul class="nav-links">
           <li><a href="#home">Home</a></li>
           <li><a href="#catalog">Catalog</a></li>
+          <li><a href="#news">News</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -41,14 +42,18 @@
           <div class="hero-content">
             <h1>Sport Bikes Collection</h1>
             <p>Explore the fastest and most stylish sport bikes.</p>
-            <a href="#catalog" class="cta-button">See Sport Bikes</a>
+            <a href="#catalog" class="cta-button" data-filter="sport"
+              >See Sport Bikes</a
+            >
           </div>
         </div>
         <div class="carousel-slide">
           <div class="hero-content">
             <h1>Touring & Adventure</h1>
             <p>Find the best motorcycles for your next journey.</p>
-            <a href="#catalog" class="cta-button">See Touring Bikes</a>
+            <a href="#catalog" class="cta-button" data-filter="touring"
+              >See Touring Bikes</a
+            >
           </div>
         </div>
         <button class="carousel-arrow left" aria-label="Previous slide">
@@ -86,6 +91,13 @@
 
       <div class="motorcycle-grid">
         <!-- Motorcycle cards will be dynamically added here -->
+      </div>
+    </section>
+
+    <section id="news" class="news">
+      <h2>Latest Motorsport News</h2>
+      <div class="news-container">
+        <!-- News articles will be dynamically added here -->
       </div>
     </section>
 
@@ -139,5 +151,7 @@
 
     <script src="catalog.js"></script>
     <script src="theme.js"></script>
+    <script src="news.js"></script>
+    <script src="scroll.js"></script>
   </body>
 </html>
